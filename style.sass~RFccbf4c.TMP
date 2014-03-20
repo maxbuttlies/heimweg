@@ -1,0 +1,51 @@
+$blockSize: 50px
+
+*
+  margin: 0
+  padding: 0
+body
+  background: #2c3e50
+
+
+.newGame
+  padding: 10px 
+  text-align: center
+  width: 100px
+  border: 1px solid #27ae60
+  background: #2ecc71
+  font-family: sans-serif
+  color: #fff
+  font-weight: bold
+.game
+  width: $blockSize * 10
+  height: $blockSize * 10
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+  &:after
+    clear: both
+    content: ''
+    display: table
+
+.block
+  width: $blockSize
+  height: $blockSize
+  border: 0.5px solid #bdc3c7
+  background: #3498db
+  position: absolute
+  &.way
+    background: #2980b9
+    
+.man
+  width: $blockSize / 2
+  height: $blockSize / 2
+  position: absolute
+  left: $blockSize * 9
+  top: $blockSize * 9
+  transform: rotate(180deg)
+  z-index: 2
+  background: #c0392b
+  border-right: 1px solid #000
+  margin: $blockSize / 4
+  border-radius: $blockSize / 4

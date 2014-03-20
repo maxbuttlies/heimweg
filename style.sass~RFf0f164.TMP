@@ -1,0 +1,81 @@
+$blockSize: 50px
+
+*
+  margin: 0
+  padding: 0
+
+body
+  background: #2c3e50
+
+.clearBoth
+  &:after
+    clear: both
+    content: ''
+    display: table
+
+.options
+  width: $blockSize * 10
+  margin: 10px auto
+  .newGame
+    padding: 10px 
+    text-align: center
+    width: 100px
+    border: 1px solid #27ae60
+    background: #2ecc71
+    font-family: sans-serif
+    color: #fff
+    font-weight: bold
+    float: left
+    font-size: 16px
+
+  .timeLeft
+    font-family: sans-serif
+    color: #fff
+    font-weight: bold
+    float: right
+    font-size: 40px
+
+.game
+  width: $blockSize * 10
+  height: $blockSize * 10
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+  
+
+.block
+  width: $blockSize
+  height: $blockSize
+  border: 0.5px solid #bdc3c7
+  background: #3498db
+  position: absolute
+  transition: background 2s
+  &.way
+    background: #2980b9
+    transition: background 2s
+    
+.man
+  width: $blockSize / 2
+  height: $blockSize / 2
+  position: absolute
+  left: $blockSize * 9
+  top: $blockSize * 9
+  transform: rotate(180deg)
+  z-index: 2
+  background: #c0392b
+  border-right: 1px solid #000
+  margin: $blockSize / 4
+  border-radius: $blockSize / 4
+  transition: left 1s, top 1s,background 2s
+  &.hurt
+    background: #000
+    transition: background 2s
+  &.finished
+    left: 50% !important
+    top: 50% !important
+    transform: translateX(-50%) translateY(-50%) !important
+    transform: rotate(460deg) !important
+    width: 100px
+    height: 100px
+    border-radius: 100px

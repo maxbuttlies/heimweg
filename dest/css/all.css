@@ -1,0 +1,130 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  list-style: none;
+}
+
+body {
+  background: #2c3e50;
+}
+
+.clearBoth:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+main {
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  left: calc(50% - 150px);
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 500px;
+  height: 500px;
+}
+
+.options {
+  width: 150px;
+  height: 300px;
+  text-align: center;
+}
+.options h1 {
+  margin-bottom: 10px;
+  color: white;
+}
+.options .button {
+  padding: 10px;
+  text-align: center;
+  width: 100px;
+  font-family: sans-serif;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 2px auto;
+  cursor: pointer;
+}
+.options .button.verylow {
+  background: #2ecc71;
+}
+.options .button.low {
+  background: #27ae60;
+}
+.options .button.medium {
+  background: #f1c40f;
+}
+.options .button.high {
+  background: #d35400;
+}
+.options .button.veryhigh {
+  background: #c0392b;
+}
+.options .timeLeft {
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.game {
+  background: white;
+  left: 150px;
+  top: 0;
+  position: absolute;
+}
+.game .block {
+  background: #3498db;
+  position: absolute;
+  transition: background 2s;
+  cursor: pointer;
+}
+.game .block.way {
+  background: #2980b9;
+  transition: background 2s;
+}
+.game .man {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  left: 450px;
+  top: 450px;
+  transform: translateX(50%) translateY(50%);
+  z-index: 2;
+  background: #c0392b;
+  border-bottom: 1px solid black;
+  border-radius: 50%;
+  transition: left 0.5s, top 0.5s, background 2s, width 1s, height 1s;
+}
+.game .man.hurt {
+  background: black;
+  transition: background 2s;
+}
+.game .man.finished {
+  left: 50% !important;
+  top: 50% !important;
+  transform: translateX(-50%) translateY(-50%) rotate(90deg) !important;
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 100px !important;
+  margin: 0;
+  transition: left 1s, top 1s, background 2s, width 1s, height 1s;
+}
+
+.message {
+  width: 480px;
+  height: 480px;
+  padding: 10px;
+  margin-left: 150px;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  font-size: 30px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 3;
+  display: none;
+}
+.message .losed, .message .finished {
+  display: none;
+}

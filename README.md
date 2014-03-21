@@ -1,4 +1,4 @@
 heimweg
 =======
 
-A little game.
+A nice little game. 
